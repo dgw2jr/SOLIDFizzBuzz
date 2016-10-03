@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDFizzBuzz", "SOLIDFizzBuzz\SOLIDFizzBuzz.csproj", "{3DAA1874-C24A-479A-B8F7-693A8843C508}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDFizzBuzzTests", "SOLIDFizzBuzzTests\SOLIDFizzBuzzTests.csproj", "{5DB61319-754B-40CD-A2AD-EBB796A02F11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{D999B8EE-2905-4C6B-BD6E-414E6054FAB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DAA1874-C24A-479A-B8F7-693A8843C508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DAA1874-C24A-479A-B8F7-693A8843C508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DAA1874-C24A-479A-B8F7-693A8843C508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DAA1874-C24A-479A-B8F7-693A8843C508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB61319-754B-40CD-A2AD-EBB796A02F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB61319-754B-40CD-A2AD-EBB796A02F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB61319-754B-40CD-A2AD-EBB796A02F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB61319-754B-40CD-A2AD-EBB796A02F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D999B8EE-2905-4C6B-BD6E-414E6054FAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D999B8EE-2905-4C6B-BD6E-414E6054FAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D999B8EE-2905-4C6B-BD6E-414E6054FAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D999B8EE-2905-4C6B-BD6E-414E6054FAB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
