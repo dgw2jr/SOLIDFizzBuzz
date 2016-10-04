@@ -6,7 +6,7 @@ namespace SOLIDFizzBuzz
 {
     public class DividendProcessor : IDividendProcessor
     {
-        private readonly IEnumerable<IDividendRule> rules;
+        private IEnumerable<IDividendRule> rules;
 
         public DividendProcessor(IEnumerable<IDividendRule> rules)
         {
@@ -15,6 +15,11 @@ namespace SOLIDFizzBuzz
 
         public string Process(int i)
         {
+            if (i == 0)
+            {
+                return i.ToString();
+            }
+
             foreach (var rule in this.rules)
             {
                 if (rule.Divisor == 0)
@@ -29,6 +34,18 @@ namespace SOLIDFizzBuzz
             }
 
             return i.ToString();
+        }
+
+        public void Register(IDividendRule newRule)
+        {
+            var temp = new List<IDividendRule> { newRule };
+            this.Register(temp);
+        }
+
+        public void Register(IEnumerable<IDividendRule> newRules)
+        {
+            var temp = this.rules.Concat(newRules);
+            this.rules = temp.OrderByDescending(r => r.Divisor);
         }
     }
 }

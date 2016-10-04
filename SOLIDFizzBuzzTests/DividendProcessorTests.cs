@@ -83,6 +83,22 @@ namespace SOLIDFizzBuzzTests
                 Assert.AreEqual(result, fizzBuzzRule.Object.Message);
             }
         }
+
+        [TestMethod]
+        public void Process_ShouldReturnZero_WhenInputIsZero()
+        {
+            using (var mock = AutoMock.GetLoose())
+            {
+                // Arrange
+                var sut = mock.Create<DividendProcessor>();
+
+                // Act
+                var result = sut.Process(0);
+
+                // Assert
+                Assert.AreEqual(result, "0");
+            }
+        }
     }
 
     
