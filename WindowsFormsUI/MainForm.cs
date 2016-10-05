@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using WindowsFormsUI.DividendRules;
 using SOLIDFizzBuzz;
 
 namespace WindowsFormsUI
@@ -8,10 +7,13 @@ namespace WindowsFormsUI
     public partial class MainForm : Form
     {
         private readonly IDividendProcessor dividendProcessor;
+        private readonly Func<int, string, IDividendRule> ruleFactory;
 
-        public MainForm(IDividendProcessor dividendProcessor)
+        public MainForm(IDividendProcessor dividendProcessor, Func<int, string, IDividendRule> ruleFactory)
         {
             this.dividendProcessor = dividendProcessor;
+            this.ruleFactory = ruleFactory;
+
             InitializeComponent();
         }
         
@@ -26,7 +28,7 @@ namespace WindowsFormsUI
         private void AddRuleButton_Click(object sender, EventArgs e)
         {
             var val = Convert.ToInt32(AddRuleNumericUpDown.Value);
-            this.dividendProcessor.Register(new DividendRule(val, AddRuleTextBox.Text));
+            this.dividendProcessor.Register(this.ruleFactory(val, this.AddRuleTextBox.Text));
         }
     }
 }

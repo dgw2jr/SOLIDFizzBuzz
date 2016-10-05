@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Autofac;
 using SOLIDFizzBuzz;
+using WindowsFormsUI.DividendRules;
 
 namespace WindowsFormsUI
 {
@@ -31,6 +32,8 @@ namespace WindowsFormsUI
             builder.RegisterType<MainForm>().AsSelf();
 
             builder.RegisterType<DividendProcessor>().As<IDividendProcessor>();
+
+            builder.Register<Func<int, string, IDividendRule>>(c => (divisor, message) => new DividendRule(divisor, message));
 
             builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
                 .Where(t => typeof(IDividendRule).IsAssignableFrom(t))
