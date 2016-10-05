@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace SOLIDFizzBuzz
 {
-    public class DividendProcessor : IDividendProcessor
+    public sealed class DividendProcessor : IDividendProcessor
     {
         private IEnumerable<IDividendRule> rules;
 
@@ -15,25 +14,10 @@ namespace SOLIDFizzBuzz
 
         public string Process(int i)
         {
-            if (i == 0)
-            {
-                return i.ToString();
-            }
-
-            foreach (var rule in this.rules)
-            {
-                if (rule.Divisor == 0)
-                {
-                    return i.ToString();
-                }
-
-                if (i % rule.Divisor == 0)
-                {
-                    return rule.Message;
-                }
-            }
-
-            return i.ToString();
+            return i == 0 ? i.ToString() : rules
+                .Where(r => r.Divisor != 0)
+                .FirstOrDefault(r => i % r.Divisor == 0)?
+                .Message ?? i.ToString();
         }
 
         public void Register(IDividendRule newRule)
