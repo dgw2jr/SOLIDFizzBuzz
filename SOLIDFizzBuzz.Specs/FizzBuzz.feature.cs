@@ -33,15 +33,15 @@ namespace SOLIDFizzBuzz.Specs
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FizzBuzz", @"	In order to pass an interview
 	As a software developer
-	I want to show Fizz for factors of 3
+	I want to show Fizz for multiples of 3
 
 	In order to pass an interview
 	As a software developer
-	I want to show Buzz for factors of 5
+	I want to show Buzz for multiples of 5
 
 	In order to pass an interview
 	As a software developer
-	I want to show FizzBuzz for factors of 15", ProgrammingLanguage.CSharp, ((string[])(null)));
+	I want to show FizzBuzz for multiples of 15", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
