@@ -74,10 +74,10 @@ namespace SOLIDFizzBuzz.Specs
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Factors of 3")]
-        public virtual void FactorsOf3()
+        [NUnit.Framework.DescriptionAttribute("Multiples of 3")]
+        public virtual void MultiplesOf3()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Factors of 3", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiples of 3", ((string[])(null)));
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
@@ -89,10 +89,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Factors of 5")]
-        public virtual void FactorsOf5()
+        [NUnit.Framework.DescriptionAttribute("Multiples of 5")]
+        public virtual void MultiplesOf5()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Factors of 5", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiples of 5", ((string[])(null)));
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line 19
@@ -104,10 +104,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Factors of 15")]
-        public virtual void FactorsOf15()
+        [NUnit.Framework.DescriptionAttribute("Multiples of 15")]
+        public virtual void MultiplesOf15()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Factors of 15", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiples of 15", ((string[])(null)));
 #line 22
 this.ScenarioSetup(scenarioInfo);
 #line 23
