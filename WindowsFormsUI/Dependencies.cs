@@ -2,7 +2,7 @@
 using System.Reflection;
 using Autofac;
 using SOLIDFizzBuzz;
-using WindowsFormsUI.DividendRules;
+using DividendRules;
 
 namespace WindowsFormsUI
 {
@@ -18,7 +18,7 @@ namespace WindowsFormsUI
 
             builder.Register<Func<int, string, IDividendRule>>(c => (divisor, message) => new DividendRule(divisor, message));
 
-            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
+            builder.RegisterAssemblyTypes(Assembly.GetAssembly(typeof(DividendRule)))
                 .Where(t => typeof(IDividendRule).IsAssignableFrom(t))
                 .AsImplementedInterfaces();
 

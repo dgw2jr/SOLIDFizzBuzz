@@ -1,6 +1,6 @@
 ﻿using SOLIDFizzBuzz;
 
-namespace WindowsFormsUI.DividendRules
+namespace DividendRules
 {
     internal class FizzRule : IDividendRule
     {

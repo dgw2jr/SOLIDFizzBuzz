@@ -1,0 +1,22 @@
+﻿@model AspNetMVCUI.Models.FizzBuzzModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            Enter a number: @Html.EditorFor(model => model.Number)
+            <input type="submit" value="Test" />
+        </div>
+    }
+
+    @if (ViewBag.Result != null)
+    {
+        <div>@ViewBag.Result</div>
+    }
+</div>
