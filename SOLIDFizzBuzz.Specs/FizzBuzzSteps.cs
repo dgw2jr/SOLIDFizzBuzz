@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using TestStack.White.UIItems;
 using NUnit.Framework;
+using TestStack.White.UIItems.WindowItems;
 
 namespace SOLIDFizzBuzz.Specs
 {
@@ -13,6 +14,9 @@ namespace SOLIDFizzBuzz.Specs
         private static Application form;
         private static string exePath = @"..\..\..\WindowsFormsUI\bin\Debug\";
         private static string exeFile = "WindowsFormsUI.exe";
+        private static string windowTitle = "FizzBuzz";
+
+        private static Window window;
        
         [BeforeFeature]
         public static void SetUp()
@@ -22,6 +26,7 @@ namespace SOLIDFizzBuzz.Specs
             info.FileName = Path.Combine(path, exeFile);
 
             form = Application.AttachOrLaunch(info);
+            window = form.GetWindow(windowTitle);
         }
 
         [AfterFeature]
@@ -30,26 +35,25 @@ namespace SOLIDFizzBuzz.Specs
             form.Kill();
         }
 
-        [Given(@"I have entered (.*) into the numeric up down control")]
-        public void GivenIHaveEnteredIntoTheNumericUpDownControl(int input)
+        [Given(@"I have entered (.*) into the (.*) control")]
+        public void GivenIHaveEnteredIntoControl(int input, string wellKnownControlName)
         {
-            var window = form.GetWindow("FizzBuzz");
             window.WaitWhileBusy();
 
-            var numericControl = window.Get<Spinner>("DividendNumericUpDown");
+            var numericControl = window.Get<Spinner>(wellKnownControlName);
             numericControl.Value = input;
             window.WaitWhileBusy();
 
             numericControl.KeyIn(TestStack.White.WindowsAPI.KeyboardInput.SpecialKeys.RETURN);
         }
         
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeFizzOnTheScreen(string message)
+        [Then(@"the result should be (.*) in the (.*) control")]
+        public void ThenTheResultShouldBeFizzOnTheScreen(string message, string wellKnownControlName)
         {
             var window = form.GetWindow("FizzBuzz");
             window.WaitWhileBusy();
 
-            var outputLabel = window.Get<Label>("MessageLabel");
+            var outputLabel = window.Get<Label>(wellKnownControlName);
 
             Assert.AreEqual(message, outputLabel.Text);
         }

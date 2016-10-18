@@ -81,9 +81,9 @@ namespace SOLIDFizzBuzz.Specs
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
- testRunner.Given("I have entered 6 into the numeric up down control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have entered 6 into the DividendNumericUpDown control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
- testRunner.Then("the result should be Fizz on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be Fizz in the MessageLabel control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -96,9 +96,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line 19
- testRunner.Given("I have entered 10 into the numeric up down control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have entered 10 into the DividendNumericUpDown control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 20
- testRunner.Then("the result should be Buzz on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be Buzz in the MessageLabel control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -111,9 +111,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 22
 this.ScenarioSetup(scenarioInfo);
 #line 23
- testRunner.Given("I have entered 30 into the numeric up down control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have entered 30 into the DividendNumericUpDown control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
- testRunner.Then("the result should be FizzBuzz on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be FizzBuzz in the MessageLabel control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
