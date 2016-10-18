@@ -15,7 +15,7 @@
         </div>
     }
 
-    @if (ViewBag.Result != null)
+    @if (!string.IsNullOrEmpty(ViewBag.Result))
     {
         <div>@ViewBag.Result</div>
     }
